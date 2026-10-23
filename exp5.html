@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Registration Page - Book Corner</title>
+</head>
+
+<body>
+    <table border="3" bordercolor="indigo" width="85%" height="600" align="center" cellspacing="0">
+
+        <!-- Heading -->
+        <tr height="15%" bgcolor="#d1c4e9">
+            <th colspan="5">
+                <h1>Book Corner</h1>
+                <h4>Buy Books Online at the Best Price</h4>
+            </th>
+        </tr>
+
+        <!-- Navigation Area -->
+        <tr height="10%" bgcolor="#ede7f6" align="center">
+            <td><a href="index.html">Home</a></td>
+            <td><a href="login.html">Login</a></td>
+            <td><a href="register.html">Registration</a></td>
+            <td><a href="catalogue.html">Catalogue</a></td>
+            <td><a href="cart.html">Cart</a></td>
+        </tr>
+
+        <tr>
+            <!-- Left Menu -->
+            <td valign="top" bgcolor="#ffe0b2">
+                <h3>Categories</h3>
+                <ul>
+                    <li>NOVELS</li><br>
+                    <li>PROGRAMMING</li><br>
+                    <li>WEB DESIGN</li><br>
+                    <li>DATABASE</li><br>
+                    <li>NETWORKS</li><br>
+                    <li>HISTORY</li>
+                </ul>
+            </td>
+
+            <!-- Registration Form Area -->
+            <td colspan="4" align="center" valign="top" bgcolor="#fffaf5">
+                <br>
+                <h3>Create Your Account</h3>
+
+                <form>
+                    <table border="0" cellpadding="6">
+                        <tr>
+                            <td align="right">Full Name:</td>
+                            <td><input type="text" name="fullname"></td>
+                        </tr>
+                        <tr>
+                            <td align="right">Create Password:</td>
+                            <td><input type="password" name="password"></td>
+                        </tr>
+                        <tr>
+                            <td align="right">Confirm Password:</td>
+                            <td><input type="password" name="confirm"></td>
+                        </tr>
+                        <tr>
+                            <td align="right">Email ID:</td>
+                            <td><input type="text" name="email"></td>
+                        </tr>
+                        <tr>
+                            <td align="right">Mobile Number:</td>
+                            <td><input type="text" name="mobile" maxlength="10"></td>
+                        </tr>
+                        <tr>
+                            <td align="right">Gender:</td>
+                            <td>
+                                <input type="radio" name="gender" value="Male"> Male
+                                <input type="radio" name="gender" value="Female"> Female
+                                <input type="radio" name="gender" value="Other"> Other
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align="right">Date of Birth:</td>
+                            <td>
+                                <select name="day">
+                                    <option>Day</option>
+                                    <option>01</option>
+                                    <option>05</option>
+                                    <option>10</option>
+                                    <option>15</option>
+                                    <option>20</option>
+                                    <option>25</option>
+                                    <option>30</option>
+                                </select>
+                                <select name="month">
+                                    <option>Month</option>
+                                    <option>Jan</option>
+                                    <option>Mar</option>
+                                    <option>May</option>
+                                    <option>Jul</option>
+                                    <option>Sep</option>
+                                    <option>Nov</option>
+                                </select>
+                                <select name="year">
+                                    <option>Year</option>
+                                    <option>1998</option>
+                                    <option>1999</option>
+                                    <option>2000</option>
+                                    <option>2001</option>
+                                    <option>2002</option>
+                                    <option>2003</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align="right">Favourite Category:</td>
+                            <td>
+                                <select name="category">
+                                    <option>Select</option>
+                                    <option>Novels</option>
+                                    <option>Programming</option>
+                                    <option>Web Design</option>
+                                    <option>Database</option>
+                                    <option>Networks</option>
+                                    <option>History</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align="right">Languages Known:</td>
+                            <td>
+                                <input type="checkbox" name="lang" value="English"> English
+                                <input type="checkbox" name="lang" value="Hindi"> Hindi
+                                <input type="checkbox" name="lang" value="Punjabi"> Punjabi
+                                <input type="checkbox" name="lang" value="Bengali"> Bengali
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align="right" valign="top">Delivery Address:</td>
+                            <td><textarea name="address" rows="4" cols="30"></textarea></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td><input type="checkbox" name="agree"> I agree to the terms and conditions</td>
+                        </tr>
+                    </table>
+
+                    <br>
+                    <input type="submit" value="Register Now">
+                    &nbsp;&nbsp;
+                    <input type="reset" value="Clear">
+                </form>
+                <br>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>
