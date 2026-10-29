@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Survey Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f4f4;
+        }
+
+        .box {
+            width: 500px;
+            margin: 50px auto;
+            padding: 20px;
+            background: white;
+            border: 2px solid black;
+        }
+
+        h1 {
+            text-align: center;
+            color: #003366;
+        }
+
+        a:link {
+            color: blue;
+            text-decoration: none;
+        }
+        a:visited {
+            color: purple;
+        }
+        a:hover {
+            color: red;
+            text-decoration: underline;
+        }
+        a:active {
+            color: green;
+        }
+
+        input[type="text"], select, textarea {
+            width: 90%;
+            padding: 8px;
+            margin: 5px 0 15px 0;
+            border: 1px solid #ccc;
+        }
+
+        input[type="submit"] {
+            background: #003366;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+    </style>
+    
+    <script>
+        function validateSurvey() {
+            let name=document.getElementById("userName").value;
+            let email=document.getElementById("userEmail").value;
+
+            if (name.length<3) {
+                alert("Error: Name must be at least 3 characters.");
+                return false;
+            }
+            let namePattern=/^[A-Za-z\s]+$/;
+            if (!namePattern.test(name)) {
+                alert("Error: Name should contain only alphabets.");
+                return false;
+            }
+
+            let emailPattern=/^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+            if (!emailPattern.test(email)) {
+                alert("Error: Please enter a valid E-mail ID.");
+                return false;
+            }
+
+            alert("Survey submitted successfully! Thank you for your feedback.");
+            return true;
+        }
+    </script>
+</head>
+
+<body>
+    <div class="box">
+        <h1>Customer Survey</h1>
+        <p>Please take a moment to fill out our survey.</p>
+        
+        <hr>
+
+        <form onsubmit="return validateSurvey()">
+            Name: <br>
+            <input type="text" id="userName" placeholder="Enter your name">
+            <br>
+            
+            E-mail ID: <br>
+            <input type="text" id="userEmail" placeholder="name@domain.com">
+            <br>
+
+            How did you hear about us? <br>
+            <select id="source">
+                <option value="social">Social Media</option>
+                <option value="friend">From a Friend</option>
+                <option value="search">Search Engine</option>
+                <option value="other">Other</option>
+            </select>
+            <br>
+
+            Would you recommend our service? <br><br>
+            <input type="radio" name="recommend" value="yes" checked> Yes
+            <input type="radio" name="recommend" value="no"> No
+            <br><br>
+
+            Additional Comments: <br>
+            <textarea id="comments" rows="4" placeholder="Tell us what you think..."></textarea>
+            <br>
+            
+            <input type="submit" value="Submit Survey">
+        </form>
+    </div>
+</body>
+</html>

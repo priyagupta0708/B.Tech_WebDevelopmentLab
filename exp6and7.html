@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Registration Form</title>
+    <style>
+        h1 {
+            text-align: center;
+        }
+
+        .box {
+            width: 400px;
+            margin: auto;
+            padding-top: 20px;
+        }
+    </style>
+    <script>
+        function validateForm() {
+            let name = document.getElementById("userName").value;
+            let password = document.getElementById("userPassword").value;
+            let email = document.getElementById("userEmail").value;
+            let phone = document.getElementById("userPhone").value;
+
+            if(name.length < 6) {
+                alert("Error: Name must not be less than 6 characters.");
+                return false;
+            }
+            let namePattern = /^[A-Za-z\s]+$/;
+            if(!namePattern.test(name)) {
+                alert("Error: Name should contain only alphabets.");
+                return false;
+            }
+
+            if(password.length < 6) {
+                alert("Password must not be less than 6 characters.");
+                return false;
+            }
+            let emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+            if(!emailPattern.test(email)) {
+                alert("Error: Please enter a valid E-mail ID.");
+                return false;
+            }
+            let phonePattern = /^\d{10}$/;
+            if(!phonePattern.test(phone)) {
+                alert("Error: Phone number must contain exactly 10 digits.");
+                return false;
+            }
+            
+            alert("Registration successful.");
+            return true;
+        }
+    </script>
+</head>
+
+<body>
+    <div class="box">
+        <h1>Registration Form</h1>
+        <form onsubmit="return validateForm()">
+            Name: <input type="text" id="userName">
+            <br><br>
+            Password: <input type="password" id="userPassword">
+            <br><br>
+            E-mail ID:  <input type="text" id="userEmail">
+            <br><br>
+            Phone Number: <input type="text" id="userPhone">
+            <br><br>
+            <input type="submit" value="Register">
+        </form>
+    </div>
+</body>
+</html>
